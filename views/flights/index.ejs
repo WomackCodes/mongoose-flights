@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='stylesheet' href='/stylesheets/style.css' />
-    <title>Mongoose Movies</title>
+    <title>Mongoose Flights</title>
 </head>
 
 <body>
-    <h1>Movie List</h1>
+    <h1>All Flights List</h1>
     <table>
         <thead>
             <tr>
@@ -18,11 +18,11 @@
                 <th>Airport</th>
                 <th>Flight #</th>
                 <th>Departure Date</th>
-                <th>First Class Availability</th>
+                <!-- <th>First Class Availability</th> -->
             </tr>
         </thead>
         <tbody>
-            <!-- Write the line of EJS to iterate over movies using forEach -->
+            <!-- Write the line of EJS to iterate over flights using forEach -->
             <% flights.forEach(function(f) { %>
             <tr>
                 <td><%= f.airline %></td>
@@ -31,7 +31,7 @@
                 <td><%= f.departs %></td>
                 <!-- finish the ternary expression to display
                        'Yes' or 'Nope' -->
-                <td><%= f.firstClass ? 'Yes' : 'No' %></td>
+                <!-- <td><%= f.firstClass ? 'Yes' : 'No' %></td> -->
             </tr>
             <!-- Close the forEach using EJS here -->
         <% }); %>

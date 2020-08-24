@@ -22,10 +22,10 @@ const flightSchema = new Schema({
             return new Date(new Date().setFullYear(new Date().getFullYear() + 1));
         }, 
     },
-    firstClass: {
-        type: Boolean,
-        default: false,
-    }
+    // firstClass: {
+    //     type: Boolean,
+    //     default: false,
+    // }
 }, {
     timestamps: true,
 });
