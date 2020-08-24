@@ -3,10 +3,16 @@ const Flight = require('../models/flight');
 module.exports = {
     new: newFlight,
     create,
+    index,
 };
 
+function index (req, res) {
+    Flight.find({}, function(err, flights) {
+        res.render('flights/index', { flights });
+    });
+}
 function newFlight(req, res) {
-    const newF = new FlightsInfo();
+    const newF = new Flight();
     const dt = newF.departs;
     const departsDate = dt.toISOString().slice(0,16);
     res.render('flights/new', {title: 'Enter new flight', departsDate});
