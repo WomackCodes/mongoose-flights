@@ -6,7 +6,10 @@ module.exports = {
 };
 
 function newFlight(req, res) {
-    res.render('flights/new');
+    const newF = new FlightsInfo();
+    const dt = newF.departs;
+    const departsDate = dt.toISOString().slice(0,16);
+    res.render('flights/new', {title: 'Enter new flight', departsDate});
 }
 
 function create (req, res) {
