@@ -14,11 +14,11 @@
     <table>
         <thead>
             <tr>
-                <th>Title</th>
-                <th>Release Year</th>
-                <th>Rating</th>
-                <th>Cast</th>
-                <th>Now Showing</th>
+                <th>Airline</th>
+                <th>Airport</th>
+                <th>Flight #</th>
+                <th>Departure Date</th>
+                <th>First Class Availability</th>
             </tr>
         </thead>
         <tbody>
@@ -31,7 +31,7 @@
                 <td><%= f.departs %></td>
                 <!-- finish the ternary expression to display
                        'Yes' or 'Nope' -->
-                <!-- <td><%= f.nowShowing ? 'Yes' : 'No' %></td> -->
+                <!-- <td><%= f.firstClass ? 'Yes' : 'No' %></td> -->
             </tr>
             <!-- Close the forEach using EJS here -->
         <% }); %>
