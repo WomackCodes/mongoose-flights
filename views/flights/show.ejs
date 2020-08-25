@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="/flights">Back to All Flights</a>
     <section id="show-page">
         <div>Airline: </div>
         <div><%= flight.airline %></div>
@@ -16,7 +17,7 @@
         <div>Departure Date: </div>
         <div><%= flight.depart %></div>
         <div>Destinations: </div>
-        <div><%= flight.destinations %></div>
+        <!-- <div><%= flight.destinations %></div> -->
     </section>
     
     <br />
@@ -46,11 +47,11 @@
     <form id="add-destination-form" method="POST" action="/flights/<%= flight._id %>/destinations">
         <label>Select Airport:</label>
                 <select name="airport">
-                    <option value="ATL"></option>
-                    <option value="DFW"></option>
-                    <option value="DEN"></option>
-                    <option value="LAX"></option>
-                    <option value="SAN"></option>
+                    <option value="ATL">ATL</option>
+                    <option value="DFW">DFW</option>
+                    <option value="DEN">DEN</option>
+                    <option value="LAX">LAX</option>
+                    <option value="SAN">SAN</option>
                 </select>
         <label>Arrival:</label>
         <input type="datetime-local" name="arrival">
