@@ -10,6 +10,9 @@
 </head>
 
 <body>
+    <a href="/flights/new">New Flight</a>
+    &nbsp; | &nbsp;
+    <a href="/flights">All Flights</a>
     <h1>All Flights List</h1>
     <table>
         <thead>
@@ -22,7 +25,6 @@
             </tr>
         </thead>
         <tbody>
-            <!-- Write the line of EJS to iterate over flights using forEach -->
             <% flights.forEach(function(f) { %>
             <tr>
                 <td><%= f.airline %></td>
@@ -33,7 +35,6 @@
                        'Yes' or 'Nope' -->
                 <!-- <td><%= f.firstClass ? 'Yes' : 'No' %></td> -->
             </tr>
-            <!-- Close the forEach using EJS here -->
         <% }); %>
         </tbody>
     </table>

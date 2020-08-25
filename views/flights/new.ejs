@@ -7,6 +7,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
+    <a href="/flights">All Flights</a>
     <h2>Enter a New Flight</h2>
     <form action="/flights" method="POST">
         <label>Airline:
@@ -30,10 +31,10 @@
                 <input type="number" name="flightNo">
         </label><br>
         <label>Departs:
-            <input type="datetime-local" name="date">
+            <input type="datetime-local" name="departs" value="<%= departsDate %>">
         </label><br>
-        <label>First Class Seating?</label><br>
-        <input type="checkbox" name="firstClass"><br><br>
+        <!-- <label>First Class Seating?</label><br>
+        <input type="checkbox" name="firstClass"><br><br> -->
         <input type="submit" value="Add Flight">
     </form>
 </body>
