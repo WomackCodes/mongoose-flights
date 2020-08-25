@@ -6,4 +6,11 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Welcome to Mongoose Flights' });
 });
 
+// Lesson had the following for Line 5:
+
+// router.get('/', function (req, res, next) {
+//   res.redirect('/flights');
+// });
+
+
 module.exports = router;
