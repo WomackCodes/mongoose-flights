@@ -6,6 +6,22 @@
     <title>Document</title>
 </head>
 <body>
-    <input name="seat" required pattern="[A-F][1-9]\d?">
+    <nav>
+        <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>Add Flight</a>
+        <a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>All Flights</a>
+    </nav>
+    <br>
+    <main>
+        <form action="/flights/<%= flightID %>/tickets" method="POST">
+            <label>Seat Preference:</label>
+            <input type="text" name="seat" required pattern="[A-F][1-9]\d?">
+            <br>
+            <label>Pick your price:</label>
+            <input type="number" name="price">
+            <br>
+            <br>
+            <button type="submit">Reserve Your Seat</button>
+        </form>
+    </main>
 </body>
 </html>
