@@ -14,7 +14,7 @@ function index(req, res) {
 }
 
 function show(req, res) {
-    Flight.findById(req.params.id, function (err, flight) {
+    Ticket.find({ flight: flight._id }, function (err, tickets) {
         res.render('flights/show', { title: 'Flight Detail', flight });
     });
 }
@@ -27,17 +27,9 @@ function newFlight(req, res) {
 }
 
 function create (req, res) {
-    // remove spaces
-    // req.body.cast.replace(/\s*, \s*/g, ',');
-    // if (req.body.airline) req.body.airline = req.body.airline.split(',');
     const flight = new Flight(req.body);
     flight.save(function(err) {
-        // one way to handle errors
-        if (err) {
-            console.log(err);
-            return res.render('flights/new');
-        }
-        // for now, redirect right back to the new.ejs
+        if (err) res.render('flights/new');
         res.redirect('/flights');
     })
 }

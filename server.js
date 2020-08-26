@@ -1,16 +1,17 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const createError = require('http-errors');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
 // connect to the database with Mongoose
 require('./config/database');
 
-var indexRouter = require('./routes/index');
-var flightsRouter = require('./routes/flights');
-var destinationsRouter = require('./routes/destinations');
+const indexRouter = require('./routes/index');
+const flightsRouter = require('./routes/flights');
+const destinationsRouter = require('./routes/destinations');
+const ticketsRouter = require("./routes/tickets");
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -25,6 +26,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/flights', flightsRouter);
 app.use('/', destinationsRouter);
+app.use('/', ticketsRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
