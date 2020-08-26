@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>New Flight Ticket</title>
 </head>
 <body>
+    <br><br>
     <nav>
         <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>Add Flight</a>
         <a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>All Flights</a>
     </nav>
-    <br>
+    <br><br>
+    <aside>
+        Use the follow for seat:
+        An A thru F character followed by a 1 thru 9 character
+        followed by zero or one 0 thru 9 character.
+    </aside>
+    <br><br>
     <main>
         <form action="/flights/<%= flightID %>/tickets" method="POST">
-            <label>Seat Preference:</label>
+            <label><strong>Preference:</strong></label>
             <input type="text" name="seat" required pattern="[A-F][1-9]\d?">
-            <br>
-            <label>Pick your price:</label>
+            <br><br>
+            <label><strong>Pick your price:</strong></label>
             <input type="number" name="price">
             <br>
             <br>
-            <button type="submit">Reserve Your Seat</button>
+            <button type="submit">Lock in my price and seat!</button>
         </form>
     </main>
 </body>
