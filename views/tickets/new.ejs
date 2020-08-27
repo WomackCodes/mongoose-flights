@@ -3,23 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>New Flight Ticket</title>
 </head>
 <body>
+    <div class="table table-striped table-dark">
     <br><br>
     <nav>
-        <a href="/flights/new" <%- title === 'Add Flight' ? 'class="active"' : '' %>>Add Flight</a>
-        <a href="/flights" <%- title === 'All Flights' ? 'class="active"' : '' %>>All Flights</a>
+        <a href="/flights/new" class="badge badge-secondary"<%- title === 'Add Flight' ? 'class="active"' : '' %>>Add Flight</a>
+        <a href="/flights" class="badge badge-secondary"<%- title === 'All Flights' ? 'class="active"' : '' %>>All Flights</a>
     </nav>
     <br><br>
-    <aside>
-        Use the follow for seat:
+    <aside class="table table-striped table-dark">
+        Use the following when selecting seat:
         An A thru F character followed by a 1 thru 9 character
         followed by zero or one 0 thru 9 character.
     </aside>
-    <br><br>
-    <main>
+    <main class="table table-striped table-dark">
         <form action="/flights/<%= flightID %>/tickets" method="POST">
             <label><strong>Preference:</strong></label>
             <input type="text" name="seat" required pattern="[A-F][1-9]\d?">
@@ -28,8 +29,9 @@
             <input type="number" name="price">
             <br>
             <br>
-            <button type="submit">Lock in my price and seat!</button>
+            <button class="badge badge-secondary" type="submit">Reserve</button>
         </form>
     </main>
+    </div>
 </body>
 </html>

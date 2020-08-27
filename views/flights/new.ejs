@@ -7,10 +7,10 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
-    <a href="/flights">All Flights</a>
-    <h2>Enter a New Flight</h2>
-    <form action="/flights" method="POST">
+<body class="newEJS">
+    <a href="/flights" class="badge badge-secondary">All Flights</a>
+    <h2 class="alert alert-secondary" role="alert">Enter a New Flight</h2>
+    <form action="/flights" method="POST" class="alert alert-dark" role="alert">
         <label>Airline:
             <select name="airline">
                 <option value="American">American</option>
