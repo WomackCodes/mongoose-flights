@@ -7,14 +7,17 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <title>Mongoose Flights</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 
 <body>
-    <a href="/flights/new">New Flight</a>
-    &nbsp; | &nbsp;
-    <a href="/flights">All Flights</a>
-    <h1>All Flights List</h1>
-    <table>
+    <div class="header">
+        <a href="/flights/new" class="badge badge-secondary">New Flight</a>
+        <!-- &nbsp; | &nbsp; -->
+        <a href="/flights" class="badge badge-secondary">All Flights</a>
+        <h1>All Flights List</h1>
+    </div>
+    <table class="table table-striped table-dark">
         <thead>
             <tr>
                 <th>Airline</th>

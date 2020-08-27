@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mongoose Flights</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
     <a href="/flights">Back to All Flights</a>
@@ -22,7 +23,7 @@
     <br />
     <% if (flight.destinations.length) { %>
     <div>Destinations: </div><br>
-    <table>
+    <table class="table table-striped table-dark">
         <thead>
             <tr>
                 <th>Airport</th>
@@ -61,7 +62,7 @@
     <a href="/flights/<%= flight._id %>/tickets/new">New Ticket</a>
 <br>
     <% if (tickets.length) { %>
-    <table>
+    <table class="table table-striped table-dark">
         <thead>
             <tr>
                 <th>Tickets</th>
