@@ -35,6 +35,11 @@
                 <td><%= f.flightNo %></td>
                 <td><%= f.departs %></td>
                 <td><a href="/flights/<%= f._id %>">Details</a></td>
+                <td>
+                    <form action="/flights/<%= f._id %>?_method=DELETE" method="POST">
+                        <button class="badge badge-secondary" type="submit">X</button>
+                    </form>
+                </td>
                 <!-- finish the ternary expression to display
                        'Yes' or 'Nope' -->
                 <!-- <td><%= f.firstClass ? 'Yes' : 'No' %></td> -->

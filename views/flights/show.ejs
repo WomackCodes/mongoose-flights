@@ -37,6 +37,11 @@
             <tr>
                 <td><%= d.airport %></td>
                 <td><%= d.arrival %></td>
+                <td>
+                    <form action="/destinations/<%= d._id %>?_method=DELETE" method="POST">
+                        <button class="red-button" type="submit">X</button>
+                    </form>
+                </td>
             </tr>
             <% }); %>
         </tbody>
